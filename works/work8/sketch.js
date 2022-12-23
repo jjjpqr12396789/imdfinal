@@ -8,7 +8,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background(0);
   system.addParticle();
   system.run();
 }
@@ -35,10 +35,17 @@ Particle.prototype.update = function () {
 
 // 화면에 보이기 위한 메소드
 Particle.prototype.display = function () {
-  stroke(200, this.lifespan);
+  stroke(0, this.lifespan);
   strokeWeight(2);
-  fill(127, this.lifespan);
+  fill(250, 150, 130, this.lifespan);
   ellipse(this.position.x, this.position.y, 12, 12);
+};
+
+Particle.prototype.display = function () {
+  stroke(0, this.lifespan);
+  strokeWeight(2);
+  fill(50, 150, 130, this.lifespan);
+  ellipse(this.position.x, this.position.y, 15, 15);
 };
 
 // 파티클이 여전히 쓸만한가요?
